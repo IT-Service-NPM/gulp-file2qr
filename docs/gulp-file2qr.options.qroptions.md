@@ -4,7 +4,9 @@
 
 ## Options.qrOptions property
 
-Options for generated PNG QR codes
+Options for generated PNG QR codes.
+
+See [\`qrcode\`](https://www.npmjs.com/package/qrcode) for more details.
 
 **Signature:**
 

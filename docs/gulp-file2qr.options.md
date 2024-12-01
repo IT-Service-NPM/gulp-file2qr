@@ -9,8 +9,9 @@ gulp-file2qr plugin options
 **Signature:**
 
 ```typescript
-interface Options 
+interface Options extends Options$1 
 ```
+**Extends:** Options$1
 
 ## Remarks
 
@@ -53,7 +54,9 @@ QRCode.QRCodeRenderersOptions
 
 </td><td>
 
-_(Optional)_ Options for generated PNG QR codes
+_(Optional)_ Options for generated PNG QR codes.
+
+See [\`qrcode\`](https://www.npmjs.com/package/qrcode) for more details.
 
 
 </td></tr>

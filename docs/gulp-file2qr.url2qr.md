@@ -20,7 +20,7 @@ URL=https://github.com/IT-Service-NPM/gulp-file2qr
 **Signature:**
 
 ```typescript
-declare function url2qr(options?: Options): QRCodesFromURICreatorStream;
+declare function url2qr(options?: Options): NodeJS.ReadWriteStream;
 ```
 
 ## Parameters
@@ -60,5 +60,5 @@ _(Optional)_ [Options](./gulp-file2qr.options.md) for QRCode generator
 </tbody></table>
 **Returns:**
 
-[QRCodesFromURICreatorStream](./gulp-file2qr.qrcodesfromuricreatorstream.md)
+NodeJS.ReadWriteStream
 

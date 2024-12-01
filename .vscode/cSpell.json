@@ -33,6 +33,7 @@
 		"gulpplugin",
 		"gutil",
 		"hiwelo",
+		"lazypipe",
 		"lcov",
 		"MAINT",
 		"markdownlint",

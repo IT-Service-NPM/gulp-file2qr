@@ -4,22 +4,31 @@
 
 ```ts
 
+import { BufferFile } from 'vinyl';
 import GulpFile from 'vinyl';
 import * as QRCode from 'qrcode';
+import { StreamFile } from 'vinyl';
 import { Transform } from 'node:stream';
 import { TransformCallback } from 'node:stream';
 
+// Warning: (ae-forgotten-export) The symbol "GulpFile2GulpFile" needs to be exported by the entry point index.d.ts
+//
 // @public
-export interface Options {
+export class GulpFile2QR extends GulpFile2GulpFile {
+}
+
+// Warning: (ae-forgotten-export) The symbol "Options$1" needs to be exported by the entry point index.d.ts
+//
+// @public
+export interface Options extends Options$1 {
     qrOptions?: QRCode.QRCodeRenderersOptions;
 }
 
 // @public
-export class QRCodesFromURICreatorStream extends Transform {
-}
+export function url2qr(options?: Options): NodeJS.ReadWriteStream;
 
 // @public
-export function url2qr(options?: Options): QRCodesFromURICreatorStream;
+export type URLFile = GulpFile;
 
 // (No @packageDocumentation comment for this package)
 

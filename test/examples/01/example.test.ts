@@ -32,27 +32,38 @@ describe('url2qr', () => {
       } finally {
         process.chdir(_cwd);
       };
+    } catch (err) {
+      expect.unreachable(`
+Unexpected error processing block.
+All exceptions must be handled in test. Error:
+${err as Error}
+`
+      );
+    };
 
-      expect(
-        fs.existsSync(testDestFilesPath),
-        `Output directory must be exists: "${testDestFilesPath}"`
-      ).toBeTruthy();
-      const QRCodePath = path.join(testDestFilesPath, 'test-file.png');
-      expect(
-        fs.existsSync(QRCodePath),
-        `Output QR code file expected: "${QRCodePath}"`
-      ).toBeTruthy();
+    expect(
+      fs.existsSync(testDestFilesPath),
+      `Output directory must be exists: "${testDestFilesPath}"`
+    ).toBeTruthy();
+    const QRCodePath = path.join(testDestFilesPath, 'test-file.png');
+    expect(
+      fs.existsSync(QRCodePath),
+      `Output QR code file expected: "${QRCodePath}"`
+    ).toBeTruthy();
 
+    let dataFromFile: string | undefined;
+    let QRCodeData: string;
+    try {
       const urlFilePath = path.join(testSrcFilesPath, 'test-file.url');
       const urlFileData = await readIniFile(urlFilePath) as {
         InternetShortcut?: {
           URL?: string
         }
       };
-      const dataFromFile = urlFileData.InternetShortcut?.URL;
+      dataFromFile = urlFileData.InternetShortcut?.URL;
       const QRCodeBuffer = fs.readFileSync(QRCodePath);
       const QRCodeImage = await Jimp.read(QRCodeBuffer);
-      const QRCodeData = await new Promise<string>((resolve, reject) => {
+      QRCodeData = await new Promise<string>((resolve, reject) => {
         /* eslint-disable-next-line
             @typescript-eslint/no-unsafe-assignment,
             @typescript-eslint/no-unsafe-call
@@ -78,10 +89,6 @@ describe('url2qr', () => {
         */
         qr.decode(QRCodeImage.bitmap);
       });
-
-      expect(QRCodeData).to.be
-        .equals(dataFromFile);
-
     } catch (err) {
       expect.unreachable(`
 Unexpected error processing block.
@@ -90,6 +97,9 @@ ${err as Error}
 `
       );
     };
+
+    expect(QRCodeData).to.be
+      .equals(dataFromFile);
   });
 
 });

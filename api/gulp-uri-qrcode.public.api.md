@@ -15,11 +15,11 @@ export interface Options {
 }
 
 // @public
-export class QRCodesFromURICreatorStream extends Transform {
+export class GulpFile2QR extends Transform {
 }
 
 // @public
-export function url2qr(options?: Options): QRCodesFromURICreatorStream;
+export function url2qr(options?: Options): GulpFile2QR;
 
 // (No @packageDocumentation comment for this package)
 

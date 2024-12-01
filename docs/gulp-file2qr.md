@@ -19,12 +19,12 @@ Description
 </th></tr></thead>
 <tbody><tr><td>
 
-[QRCodesFromURICreatorStream](./gulp-file2qr.qrcodesfromuricreatorstream.md)
+[GulpFile2QR](./gulp-file2qr.gulpfile2qr.md)
 
 
 </td><td>
 
-Gulp plugin stream for transformation .url files to PNG QR codes
+Gulp plugin stream for transformation text data from file to PNG QR code
 
 
 </td></tr>
@@ -88,6 +88,41 @@ Description
 </td><td>
 
 gulp-file2qr plugin options
+
+
+</td></tr>
+</tbody></table>
+
+## Type Aliases
+
+<table><thead><tr><th>
+
+Type Alias
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[URLFile](./gulp-file2qr.urlfile.md)
+
+
+</td><td>
+
+A Gulp plugin for creating PNG QRCodes with URI from source .url files.
+
+.url files - INI files. For example:
+
+```ini
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,2
+[InternetShortcut]
+URL=https://github.com/IT-Service-NPM/gulp-file2qr
+```
 
 
 </td></tr>
