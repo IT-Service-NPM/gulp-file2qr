@@ -1,3 +1,10 @@
+## [1.1.0](https://github.com/IT-Service-NPM/gulp-file2qr/compare/v1.0.0...v1.1.0) (2024-12-01)
+
+
+### Features
+
+* add `buffer` option ([a9369cd](https://github.com/IT-Service-NPM/gulp-file2qr/commit/a9369cddf83c14afbe6b104ab03f241fa4f08ac0))
+
 ## 1.0.0 (2024-12-01)
 
 
