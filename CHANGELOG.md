@@ -1,3 +1,15 @@
+## [1.1.1](https://github.com/IT-Service-NPM/gulp-file2qr/compare/v1.1.0...v1.1.1) (2024-12-01)
+
+
+### Bug Fixes
+
+* fix tsup bundle options - just for NodeJS ([f990d0d](https://github.com/IT-Service-NPM/gulp-file2qr/commit/f990d0d99d12428f8de22fdd19d5122e14d5cb10)), closes [#2](https://github.com/IT-Service-NPM/gulp-file2qr/issues/2)
+
+
+### Other Updates
+
+* remove unused type URLFile ([828747a](https://github.com/IT-Service-NPM/gulp-file2qr/commit/828747af903744d0305fcf871c6750955ef52b56))
+
 ## [1.1.0](https://github.com/IT-Service-NPM/gulp-file2qr/compare/v1.0.0...v1.1.0) (2024-12-01)
 
 
