@@ -1,7 +1,7 @@
 {
   "name": "gulp-file2qr",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "A Gulp plugin build QR code .png file from data in source files.",
   "keywords": [
     "gulpplugin",

@@ -1,3 +1,10 @@
+## 1.0.0 (2024-12-01)
+
+
+### Features
+
+* url2qr - create qrcode from .url files ([e7852b2](https://github.com/IT-Service-NPM/gulp-file2qr/commit/e7852b248879eceab989449bd325052b10a4db52))
+
 ## [1.0.2](https://github.com/IT-Service-NPM/gulp-file2qr/compare/v1.0.1...v1.0.2) (2024-12-01)
 
 
