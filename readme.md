@@ -16,16 +16,20 @@
 [![EditorConfig](https://img.shields.io/badge/EditorConfig-333333.svg?logo=editorconfig)](https://editorconfig.org)
 [![ESLint](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)](https://eslint.org)
 
-This Gulp plugin build QRCode from data in source files.
+This Gulp plugin build QRCode from data in source files
+(now from .url files,
+and from other file types in the future).
 
 ## Contents
 
-* [Install](#install)
-* [Examples](#examples)
-  * [Create PNG QRCode from .url files with default settings](#create-png-qrcode-from-url-files-with-defaultsettings)
-  * [Create QRCode in streaming mode with scale](#create-qrcode-in-streaming-mode-withscale)
-* [API](#api)
-* [License](#license)
+- [gulp-file2qr](#gulp-file2qr)
+  - [Contents](#contents)
+  - [Install](#install)
+  - [Examples](#examples)
+    - [Create PNG QRCode from .url files with default settings](#create-png-qrcode-from-url-files-with-defaultsettings)
+    - [Create QRCode in streaming mode with scale](#create-qrcode-in-streaming-mode-withscale)
+  - [API](#api)
+  - [License](#license)
 
 ## Install
 
