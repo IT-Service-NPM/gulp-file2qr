@@ -22,8 +22,6 @@ import { parseIniFromString } from 'cool-ini-parser';
 
 const PLUGIN_NAME = 'gulp-file2qr';
 
-export type URLFile = GulpFile;
-
 /**
  * Gulp plugin stream for transformation .url files
  * to plain text utf-8 file with url
