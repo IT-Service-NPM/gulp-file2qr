@@ -58,6 +58,7 @@ _(Optional)_ [Options](./gulp-file2qr.options.md) for QRCode generator
 
 </td></tr>
 </tbody></table>
+
 **Returns:**
 
 NodeJS.ReadWriteStream

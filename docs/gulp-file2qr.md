@@ -92,3 +92,4 @@ gulp-file2qr plugin options
 
 </td></tr>
 </tbody></table>
+
