@@ -20,6 +20,8 @@ import streamx from 'streamx';
 import { GulpFile2BufferFile } from './fileBase.ts';
 import { type Options, file2qr } from './file2qr.ts';
 import { parseIniFromString } from 'cool-ini-parser';
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-require-imports
+const Composer = require('stream-composer');
 
 const PLUGIN_NAME = 'gulp-file2qr';
 
@@ -77,8 +79,6 @@ class URLFile2TextGulpFile extends GulpFile2BufferFile {
  * @public
  */
 export function url2qr(options?: Options): NodeJS.ReadWriteStream {
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-require-imports
-  const Composer = require('stream-composer');
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
   const pluginStream: streamx.Duplex = Composer.pipeline(
     new URLFile2TextGulpFile(),
