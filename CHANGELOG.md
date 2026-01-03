@@ -1,3 +1,11 @@
+## <small>1.1.2 (2026-01-02)</small>
+
+* fix(plugin): use stream-composer ([282d2ab](https://github.com/IT-Service-NPM/gulp-file2qr/commit/282d2ab))
+* build: crlf to lf for yml, update deps ([46288dc](https://github.com/IT-Service-NPM/gulp-file2qr/commit/46288dc))
+* build(deps): bump @vitest/coverage-istanbul from 2.1.9 to 3.1.2 ([2b062dd](https://github.com/IT-Service-NPM/gulp-file2qr/commit/2b062dd))
+* build(deps): bump tsdoc-markdown from 0.6.3 to 1.0.0 ([701c955](https://github.com/IT-Service-NPM/gulp-file2qr/commit/701c955))
+* build(deps): bump vitest from 2.1.9 to 3.1.2 ([ecc4377](https://github.com/IT-Service-NPM/gulp-file2qr/commit/ecc4377))
+
 ## [1.1.1](https://github.com/IT-Service-NPM/gulp-file2qr/compare/v1.1.0...v1.1.1) (2024-12-01)
 
 

@@ -61,3 +61,4 @@ See [\`qrcode\`](https://www.npmjs.com/package/qrcode) for more details.
 
 </td></tr>
 </tbody></table>
+
