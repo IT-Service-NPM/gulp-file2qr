@@ -1,11 +1,13 @@
 # gulp-file2qr
 
-[![GitHub release](https://img.shields.io/github/v/release/IT-Service-NPM/gulp-file2qr.svg?sort=semver\&logo=github)](https://github.com/IT-Service-NPM/gulp-file2qr/releases)
-[![NPM release](https://img.shields.io/npm/v/gulp-file2qr.svg?logo=npm)](https://www.npmjs.com/package/gulp-file2qr)
-
-[![CI Status](https://github.com/IT-Service-NPM/gulp-file2qr/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/IT-Service-NPM/gulp-file2qr/actions/workflows/ci.yml)
-[![Tests Results](https://gist.githubusercontent.com/sergey-s-betke/d70e4de09a490afc9fb7a737363b231a/raw/gulp-file2qr-tests.svg)](https://github.com/IT-Service-NPM/gulp-file2qr/actions/workflows/ci.yml)
-[![Coverage](https://gist.githubusercontent.com/sergey-s-betke/d70e4de09a490afc9fb7a737363b231a/raw/gulp-file2qr-coverage.svg)](https://github.com/IT-Service-NPM/gulp-file2qr/actions/workflows/ci.yml)
+[![GitHub release][github-release]][github-release-url]
+[![NPM release][npm]][npm-url]
+[![Node version][node]][node-url]
+[![Dependencies status][deps]][deps-url]
+[![Install size][size]][size-url]
+[![CI Status][build]][build-url]
+[![Tests Results][tests]][tests-url]
+[![Coverage status][coverage]][coverage-url]
 
 [![Semantic Versioning](https://img.shields.io/badge/Semantic%20Versioning-v2.0.0-green.svg?logo=semver)](https://semver.org/lang/ru/spec/v2.0.0.html)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-v1.0.0-yellow.svg?logo=git)](https://conventionalcommits.org)
@@ -16,18 +18,44 @@
 [![EditorConfig](https://img.shields.io/badge/EditorConfig-333333.svg?logo=editorconfig)](https://editorconfig.org)
 [![ESLint](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)](https://eslint.org)
 
+[github-release]: https://img.shields.io/github/v/release/IT-Service-NPM/gulp-file2qr.svg?sort=semver&logo=github
+[github-release-url]: https://github.com/IT-Service-NPM/gulp-file2qr/releases
+
+[npm]: https://img.shields.io/npm/v/gulp-file2qr.svg?logo=npm
+[npm-url]: https://www.npmjs.com/package/gulp-file2qr
+
+[node]: https://img.shields.io/node/v/gulp-file2qr.svg
+[node-url]: https://nodejs.org
+
+[deps]: https://img.shields.io/librariesio/release/npm/gulp-file2qr
+[deps-url]: https://libraries.io/npm/gulp-file2qr/tree
+
+[size]: https://packagephobia.com/badge?p=gulp-file2qr
+[size-url]: https://packagephobia.com/result?p=gulp-file2qr
+
+[build]: https://github.com/IT-Service-NPM/gulp-file2qr/actions/workflows/ci.yml/badge.svg?branch=main
+[build-url]: https://github.com/IT-Service-NPM/gulp-file2qr/actions/workflows/ci.yml
+
+[tests]: https://gist.githubusercontent.com/sergey-s-betke/d70e4de09a490afc9fb7a737363b231a/raw/gulp-file2qr-tests.svg
+[tests-url]: https://github.com/IT-Service-NPM/gulp-file2qr/actions/workflows/ci.yml
+
+[coverage]: https://gist.githubusercontent.com/sergey-s-betke/d70e4de09a490afc9fb7a737363b231a/raw/gulp-file2qr-coverage.svg
+[coverage-url]: https://github.com/IT-Service-NPM/gulp-file2qr/actions/workflows/ci.yml
+
 This Gulp plugin build QRCode from data in source files
 (now from .url files,
 and from other file types in the future).
 
 ## Contents
 
-* [Install](#install)
-* [Examples](#examples)
-  * [Create PNG QRCode from .url files with default settings](#create-png-qrcode-from-url-files-with-defaultsettings)
-  * [Create QRCode in streaming mode with scale](#create-qrcode-in-streaming-mode-withscale)
-* [API](#api)
-* [License](#license)
+- [gulp-file2qr](#gulp-file2qr)
+  - [Contents](#contents)
+  - [Install](#install)
+  - [Examples](#examples)
+    - [Create PNG QRCode from .url files with default settings](#create-png-qrcode-from-url-files-with-defaultsettings)
+    - [Create QRCode in streaming mode with scale](#create-qrcode-in-streaming-mode-withscale)
+  - [API](#api)
+  - [License](#license)
 
 ## Install
 
