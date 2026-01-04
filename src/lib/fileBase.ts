@@ -1,5 +1,5 @@
 // import assert from 'node:assert/strict';
-import { Transform, type TransformCallback } from 'node:stream';
+import { Transform, type ResultCallback } from 'streamx';
 import { callbackify } from 'util';
 import PluginError from 'plugin-error';
 import GulpFile, { type StreamFile, type BufferFile } from 'vinyl';
@@ -12,14 +12,7 @@ const PLUGIN_NAME = 'gulp-file2qr';
  *
  * @public @internal
  */
-export abstract class GulpFile2BufferFile extends Transform {
-
-  /**
-   * @internal
-   */
-  constructor() {
-    super({ objectMode: true });
-  };
+export abstract class GulpFile2BufferFile extends Transform<GulpFile> {
 
   /**
    * @internal
@@ -66,8 +59,7 @@ export abstract class GulpFile2BufferFile extends Transform {
    */
   override _transform(
     file: GulpFile,
-    encoding: BufferEncoding,
-    callback: TransformCallback
+    callback: ResultCallback<GulpFile>
   ): void {
     callbackify(async (): Promise<GulpFile | undefined> => {
       if (file.isNull()) {
@@ -134,8 +126,7 @@ export abstract class GulpFile2GulpFile extends GulpFile2BufferFile {
    */
   override _transform(
     file: GulpFile,
-    encoding: BufferEncoding,
-    callback: TransformCallback
+    callback: ResultCallback<GulpFile>
   ): void {
     callbackify(async (): Promise<GulpFile | undefined> => {
       if (file.isNull()) {

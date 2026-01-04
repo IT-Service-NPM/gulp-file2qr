@@ -20,8 +20,7 @@ import streamx from 'streamx';
 import { GulpFile2BufferFile } from './fileBase.ts';
 import { type Options, file2qr } from './file2qr.ts';
 import { parseIniFromString } from 'cool-ini-parser';
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-require-imports
-const Composer = require('stream-composer');
+import Composer from 'stream-composer/index.js';
 
 const PLUGIN_NAME = 'gulp-file2qr';
 
