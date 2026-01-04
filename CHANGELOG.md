@@ -10,6 +10,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/IT-Service-NPM/gulp-file2qr/compare/v1.1.4...v1.1.5) (2026-01-04)
+
+
+### Bug Fixes
+
+* **github-actions:** restore and tune release-notes-generator config ([0bdc680](https://github.com/IT-Service-NPM/gulp-file2qr/commit/0bdc680de7b92cf032f8726d26c570ac1d1b8776))
+
 ## [1.1.4](https://github.com/IT-Service-NPM/gulp-file2qr/compare/v1.1.3...v1.1.4) (2026-01-04)
 
 * Merge branch 'main' of github.com:IT-Service-NPM/gulp-file2qr ([17b5689](https://github.com/IT-Service-NPM/gulp-file2qr/commit/17b5689))
