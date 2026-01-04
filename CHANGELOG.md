@@ -1,3 +1,8 @@
+## <small>1.1.3 (2026-01-03)</small>
+
+* Merge branch 'main' of github.com:IT-Service-NPM/gulp-file2qr ([b9c4b67](https://github.com/IT-Service-NPM/gulp-file2qr/commit/b9c4b67))
+* fix(plugin): fix "dynamic require is not supported" ([7287bdb](https://github.com/IT-Service-NPM/gulp-file2qr/commit/7287bdb)), closes [#16](https://github.com/IT-Service-NPM/gulp-file2qr/issues/16)
+
 ## <small>1.1.2 (2026-01-02)</small>
 
 * fix(plugin): use stream-composer ([282d2ab](https://github.com/IT-Service-NPM/gulp-file2qr/commit/282d2ab))
