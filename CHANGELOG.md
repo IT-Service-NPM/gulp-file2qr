@@ -1,14 +1,26 @@
-## <small>1.1.4 (2026-01-04)</small>
+<!-- markdownlint-configure-file
+{
+  "default": true,
+  "line-length": false,
+  "no-duplicate-heading": false
+}
+-->
+# 📓 Changelog
+
+All notable changes to this project will be documented in this file. See
+[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [1.1.4](https://github.com/IT-Service-NPM/gulp-file2qr/compare/v1.1.3...v1.1.4) (2026-01-04)
 
 * Merge branch 'main' of github.com:IT-Service-NPM/gulp-file2qr ([17b5689](https://github.com/IT-Service-NPM/gulp-file2qr/commit/17b5689))
 * fix(plugin): dynamic require is not supported ([16fdcaf](https://github.com/IT-Service-NPM/gulp-file2qr/commit/16fdcaf)), closes [#16](https://github.com/IT-Service-NPM/gulp-file2qr/issues/16)
 
-## <small>1.1.3 (2026-01-03)</small>
+## [1.1.3](https://github.com/IT-Service-NPM/gulp-file2qr/compare/v1.1.2...v1.1.3) (2026-01-03)
 
 * Merge branch 'main' of github.com:IT-Service-NPM/gulp-file2qr ([b9c4b67](https://github.com/IT-Service-NPM/gulp-file2qr/commit/b9c4b67))
 * fix(plugin): fix "dynamic require is not supported" ([7287bdb](https://github.com/IT-Service-NPM/gulp-file2qr/commit/7287bdb)), closes [#16](https://github.com/IT-Service-NPM/gulp-file2qr/issues/16)
 
-## <small>1.1.2 (2026-01-02)</small>
+## [1.1.2](https://github.com/IT-Service-NPM/gulp-file2qr/compare/v1.1.1...v1.1.2) (2026-01-02)
 
 * fix(plugin): use stream-composer ([282d2ab](https://github.com/IT-Service-NPM/gulp-file2qr/commit/282d2ab))
 * build: crlf to lf for yml, update deps ([46288dc](https://github.com/IT-Service-NPM/gulp-file2qr/commit/46288dc))
@@ -18,11 +30,9 @@
 
 ## [1.1.1](https://github.com/IT-Service-NPM/gulp-file2qr/compare/v1.1.0...v1.1.1) (2024-12-01)
 
-
 ### Bug Fixes
 
 * fix tsup bundle options - just for NodeJS ([f990d0d](https://github.com/IT-Service-NPM/gulp-file2qr/commit/f990d0d99d12428f8de22fdd19d5122e14d5cb10)), closes [#2](https://github.com/IT-Service-NPM/gulp-file2qr/issues/2)
-
 
 ### Other Updates
 
@@ -30,13 +40,11 @@
 
 ## [1.1.0](https://github.com/IT-Service-NPM/gulp-file2qr/compare/v1.0.0...v1.1.0) (2024-12-01)
 
-
 ### Features
 
 * add `buffer` option ([a9369cd](https://github.com/IT-Service-NPM/gulp-file2qr/commit/a9369cddf83c14afbe6b104ab03f241fa4f08ac0))
 
 ## 1.0.0 (2024-12-01)
-
 
 ### Features
 
@@ -44,20 +52,17 @@
 
 ## [1.0.2](https://github.com/IT-Service-NPM/gulp-file2qr/compare/v1.0.1...v1.0.2) (2024-12-01)
 
-
 ### Bug Fixes
 
 * **plugin:** remove unnecessary error handling in QRCode callback ([628f089](https://github.com/IT-Service-NPM/gulp-file2qr/commit/628f08931a04975e8db101a5f52c6bc335169bc6))
 
 ## [1.0.1](https://github.com/IT-Service-NPM/gulp-file2qr/compare/v1.0.0...v1.0.1) (2024-12-01)
 
-
 ### Bug Fixes
 
 * **plugin:** fix url2qr streaming mode ([44059d1](https://github.com/IT-Service-NPM/gulp-file2qr/commit/44059d189fdbfb403a610e27a0b6b91496bf56f4))
 
 ## 1.0.0 (2024-11-30)
-
 
 ### Features
 
