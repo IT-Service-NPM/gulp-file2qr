@@ -1,3 +1,8 @@
+## <small>1.1.4 (2026-01-04)</small>
+
+* Merge branch 'main' of github.com:IT-Service-NPM/gulp-file2qr ([17b5689](https://github.com/IT-Service-NPM/gulp-file2qr/commit/17b5689))
+* fix(plugin): dynamic require is not supported ([16fdcaf](https://github.com/IT-Service-NPM/gulp-file2qr/commit/16fdcaf)), closes [#16](https://github.com/IT-Service-NPM/gulp-file2qr/issues/16)
+
 ## <small>1.1.3 (2026-01-03)</small>
 
 * Merge branch 'main' of github.com:IT-Service-NPM/gulp-file2qr ([b9c4b67](https://github.com/IT-Service-NPM/gulp-file2qr/commit/b9c4b67))
