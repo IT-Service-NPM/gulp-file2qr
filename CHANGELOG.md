@@ -2,7 +2,8 @@
 {
   "default": true,
   "line-length": false,
-  "no-duplicate-heading": false
+  "no-duplicate-heading": false,
+  "no-multiple-blanks": false
 }
 -->
 # 📓 Changelog

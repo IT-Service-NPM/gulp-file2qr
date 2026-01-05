@@ -78,7 +78,6 @@ class URLFile2TextGulpFile extends GulpFile2BufferFile {
  * @public
  */
 export function url2qr(options?: Options): NodeJS.ReadWriteStream {
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
   const pluginStream: streamx.Duplex = Composer.pipeline(
     new URLFile2TextGulpFile(),
     file2qr(options)
