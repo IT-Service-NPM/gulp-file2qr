@@ -201,7 +201,7 @@ jobs:
           fetch-depth: 1
 
       - name: Download artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           path: test/results
 
@@ -213,7 +213,7 @@ jobs:
 
 
       - name: Download artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: Coverage
           path: coverage
