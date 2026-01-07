@@ -3,7 +3,11 @@ import GulpClient from 'gulp';
 import file from 'gulp-file';
 
 function task1() {
-  return file('test-file', 'https://github.com/IT-Service-NPM/gulp-file2qr', { src: true })
+  return file(
+    'test-file',
+    'https://github.com/IT-Service-NPM/gulp-file2qr',
+    { src: true }
+  )
     .pipe(file2qr())
     .pipe(GulpClient.dest('output'));
 };
