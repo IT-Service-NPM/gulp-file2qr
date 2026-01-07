@@ -11,6 +11,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6](https://github.com/IT-Service-NPM/gulp-file2qr/compare/v1.1.5...v1.1.6) (2026-01-07)
+
+
+### Bug Fixes
+
+* **plugin:** file2qr type incompatibility for pipe ([5a869a5](https://github.com/IT-Service-NPM/gulp-file2qr/commit/5a869a50f9bee03c8337d9073d0b3f654109d4f2)), closes [#26](https://github.com/IT-Service-NPM/gulp-file2qr/issues/26) [#25](https://github.com/IT-Service-NPM/gulp-file2qr/issues/25)
+
 ## [1.1.5](https://github.com/IT-Service-NPM/gulp-file2qr/compare/v1.1.4...v1.1.5) (2026-01-04)
 
 
