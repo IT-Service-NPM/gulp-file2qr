@@ -7,9 +7,9 @@
 import { BufferFile } from 'vinyl';
 import GulpFile from 'vinyl';
 import * as QRCode from 'qrcode';
+import { ResultCallback } from 'streamx';
 import { StreamFile } from 'vinyl';
-import { Transform } from 'node:stream';
-import { TransformCallback } from 'node:stream';
+import { Transform } from 'streamx';
 
 // Warning: (ae-forgotten-export) The symbol "GulpFile2GulpFile" needs to be exported by the entry point index.d.ts
 //
@@ -27,8 +27,9 @@ export interface Options extends Options$1 {
 // @public
 export function url2qr(options?: Options): NodeJS.ReadWriteStream;
 
-// @public
-export type URLFile = GulpFile;
+// Warnings were encountered during analysis:
+//
+// dist/index.d.ts:125:1 - (ae-internal-missing-underscore) The name "file2qr" should be prefixed with an underscore because the declaration is marked as @internal
 
 // (No @packageDocumentation comment for this package)
 

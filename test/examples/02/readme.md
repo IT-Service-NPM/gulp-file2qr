@@ -1,28 +1,25 @@
-### Create QRCode in streaming mode with scale
+### Create PNG QRCode from text files, contains URL
 
-Read .url files in streaming mode
-and create PNG QRCodes with `scale = 10`.
+`file2qr` can create PNG QRCodes from text files, contains URL.
 
 ```typescript file=./gulpfile.ts
-import { url2qr } from '#gulp-file2qr';
+import { file2qr } from '#gulp-file2qr';
 import GulpClient from 'gulp';
 
 function task1() {
-  return GulpClient.src('fixtures/*.url', { buffer: false })
-    .pipe(url2qr({ qrOptions: { scale: 10 }, buffer: false }))
-    .pipe(GulpClient.dest('output', { encoding: false }));
+  return GulpClient.src('fixtures/*.txt')
+    .pipe(file2qr())
+    .pipe(GulpClient.dest('output'));
 };
 task1.description = 'Test gulp task for creating PNG QR codes';
 GulpClient.task(task1);
+
 ```
 
-.url files — INI files. For example:
+.txt files, for this example:
 
-```ini file=./fixtures/test-file.url
-[{000214A0-0000-0000-C000-000000000046}]
-Prop3=19,2
-[InternetShortcut]
-URL=https://github.com/IT-Service-NPM/gulp-file2qr
+```text file=./fixtures/test-file.txt
+https://github.com/IT-Service-NPM/gulp-file2qr
 ```
 
 QRCode:

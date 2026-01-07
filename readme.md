@@ -21,27 +21,35 @@
 [![ESLint](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)](https://eslint.org)
 
 [github-release]: https://img.shields.io/github/v/release/IT-Service-NPM/gulp-file2qr.svg?sort=semver&logo=github
+
 [github-release-url]: https://github.com/IT-Service-NPM/gulp-file2qr/releases
 
 [npm]: https://img.shields.io/npm/v/gulp-file2qr.svg?logo=npm
+
 [npm-url]: https://www.npmjs.com/package/gulp-file2qr
 
 [node]: https://img.shields.io/node/v/gulp-file2qr.svg
+
 [node-url]: https://nodejs.org
 
 [deps]: https://img.shields.io/librariesio/release/npm/gulp-file2qr
+
 [deps-url]: https://libraries.io/npm/gulp-file2qr/tree
 
 [size]: https://packagephobia.com/badge?p=gulp-file2qr
+
 [size-url]: https://packagephobia.com/result?p=gulp-file2qr
 
 [build]: https://github.com/IT-Service-NPM/gulp-file2qr/actions/workflows/ci.yml/badge.svg?branch=main
+
 [build-url]: https://github.com/IT-Service-NPM/gulp-file2qr/actions/workflows/ci.yml
 
 [tests]: https://gist.githubusercontent.com/sergey-s-betke/d70e4de09a490afc9fb7a737363b231a/raw/gulp-file2qr-tests.svg
+
 [tests-url]: https://github.com/IT-Service-NPM/gulp-file2qr/actions/workflows/ci.yml
 
 [coverage]: https://gist.githubusercontent.com/sergey-s-betke/d70e4de09a490afc9fb7a737363b231a/raw/gulp-file2qr-coverage.svg
+
 [coverage-url]: https://github.com/IT-Service-NPM/gulp-file2qr/actions/workflows/ci.yml
 
 This Gulp plugin build QRCode from data in source files
@@ -50,14 +58,14 @@ and from other file types in the future).
 
 ## Contents
 
-- [gulp-file2qr](#gulp-file2qr)
-  - [Contents](#contents)
-  - [Install](#install)
-  - [Examples](#examples)
-    - [Create PNG QRCode from .url files with default settings](#create-png-qrcode-from-url-files-with-defaultsettings)
-    - [Create QRCode in streaming mode with scale](#create-qrcode-in-streaming-mode-withscale)
-  - [API](#api)
-  - [License](#license)
+* [Install](#install)
+* [Examples](#examples)
+  * [Create PNG QRCode from string, contains URL](#create-png-qrcode-from-string-containsurl)
+  * [Create PNG QRCode from text files, contains URL](#create-png-qrcode-from-text-files-containsurl)
+  * [Create PNG QRCode from .url files with default settings](#create-png-qrcode-from-url-files-with-defaultsettings)
+  * [Create QRCode in streaming mode with scale](#create-qrcode-in-streaming-mode-withscale)
+* [API](#api)
+* [License](#license)
 
 ## Install
 
@@ -67,11 +75,62 @@ npm install --save-dev gulp-file2qr
 
 ## Examples
 
+### Create PNG QRCode from string, contains URL
+
+`file2qr` can create PNG QRCodes from string, contains URL.
+
+```javascript file=test/examples/01/gulpfile.mjs
+import { file2qr } from '#gulp-file2qr';
+import GulpClient from 'gulp';
+import file from 'gulp-file';
+
+function task1() {
+  return file('test-file', 'https://github.com/IT-Service-NPM/gulp-file2qr', { src: true })
+    .pipe(file2qr())
+    .pipe(GulpClient.dest('output'));
+};
+task1.description = 'Test gulp task for creating PNG QR codes';
+GulpClient.task(task1);
+
+```
+
+QRCode:
+
+[![QRCode](./test/examples/01/output/test-file.png)](./test/examples/01/output/test-file.png)
+
+### Create PNG QRCode from text files, contains URL
+
+`file2qr` can create PNG QRCodes from text files, contains URL.
+
+```typescript file=test/examples/02/gulpfile.ts
+import { file2qr } from '#gulp-file2qr';
+import GulpClient from 'gulp';
+
+function task1() {
+  return GulpClient.src('fixtures/*.txt')
+    .pipe(file2qr())
+    .pipe(GulpClient.dest('output'));
+};
+task1.description = 'Test gulp task for creating PNG QR codes';
+GulpClient.task(task1);
+
+```
+
+.txt files, for this example:
+
+```text file=test/examples/02/fixtures/test-file.txt
+https://github.com/IT-Service-NPM/gulp-file2qr
+```
+
+QRCode:
+
+[![QRCode](./test/examples/02/output/test-file.png)](./test/examples/02/output/test-file.png)
+
 ### Create PNG QRCode from .url files with default settings
 
 `url2qr` can create PNG QRCodes from .url files.
 
-```typescript file=test/examples/01/gulpfile.ts
+```typescript file=test/examples/03/gulpfile.ts
 import { url2qr } from '#gulp-file2qr';
 import GulpClient from 'gulp';
 
@@ -82,11 +141,12 @@ function task1() {
 };
 task1.description = 'Test gulp task for creating PNG QR codes';
 GulpClient.task(task1);
+
 ```
 
 .url files — INI files. For example:
 
-```ini file=test/examples/01/fixtures/test-file.url
+```ini file=test/examples/03/fixtures/test-file.url
 [{000214A0-0000-0000-C000-000000000046}]
 Prop3=19,2
 [InternetShortcut]
@@ -95,14 +155,14 @@ URL=https://github.com/IT-Service-NPM/gulp-file2qr
 
 QRCode:
 
-[![QRCode](./test/examples/01/output/test-file.png)](./test/examples/01/output/test-file.png)
+[![QRCode](./test/examples/03/output/test-file.png)](./test/examples/03/output/test-file.png)
 
 ### Create QRCode in streaming mode with scale
 
 Read .url files in streaming mode
 and create PNG QRCodes with `scale = 10`:
 
-```typescript file=test/examples/02/gulpfile.ts
+```typescript file=test/examples/04/gulpfile.ts
 import { url2qr } from '#gulp-file2qr';
 import GulpClient from 'gulp';
 
@@ -113,11 +173,12 @@ function task1() {
 };
 task1.description = 'Test gulp task for creating PNG QR codes';
 GulpClient.task(task1);
+
 ```
 
 QRCode:
 
-[![QRCode](./test/examples/02/output/test-file.png)](./test/examples/02/output/test-file.png)
+[![QRCode](./test/examples/04/output/test-file.png)](./test/examples/04/output/test-file.png)
 
 ## API
 

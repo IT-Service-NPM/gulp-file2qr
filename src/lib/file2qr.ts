@@ -102,6 +102,6 @@ export class GulpFile2QR extends GulpFile2GulpFile {
  *
  * @internal
  */
-export function file2qr(options?: Options): GulpFile2QR {
-  return new GulpFile2QR(options);
+export function file2qr(options?: Options): NodeJS.ReadWriteStream {
+  return new GulpFile2QR(options) as unknown as NodeJS.ReadWriteStream;
 };

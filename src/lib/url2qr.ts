@@ -18,7 +18,7 @@ import PluginError from 'plugin-error';
 import GulpFile, { type BufferFile } from 'vinyl';
 import streamx from 'streamx';
 import { GulpFile2BufferFile } from './fileBase.ts';
-import { type Options, file2qr } from './file2qr.ts';
+import { type Options, GulpFile2QR } from './file2qr.ts';
 import { parseIniFromString } from 'cool-ini-parser';
 import Composer from 'stream-composer/index.js';
 
@@ -80,7 +80,7 @@ class URLFile2TextGulpFile extends GulpFile2BufferFile {
 export function url2qr(options?: Options): NodeJS.ReadWriteStream {
   const pluginStream: streamx.Duplex = Composer.pipeline(
     new URLFile2TextGulpFile(),
-    file2qr(options)
+    new GulpFile2QR(options)
   );
   return pluginStream as unknown as NodeJS.ReadWriteStream;
 };

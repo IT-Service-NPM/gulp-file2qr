@@ -97,6 +97,7 @@
     "eslint-plugin-tsdoc": "^0.4.0",
     "gulp": "^5.0.0",
     "gulp-cli": "^3.0.0",
+    "gulp-file": "^0.4.0",
     "gulp-file2qr": "file:",
     "jimp": "^1.6.0",
     "qrcode-reader": "^1.0.4",

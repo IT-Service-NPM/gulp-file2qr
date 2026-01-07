@@ -3,6 +3,7 @@ import { describe, expect, it, beforeEach } from 'vitest';
 import { promisify } from 'node:util';
 import * as path from 'node:path';
 import * as fs from 'node:fs';
+import { readIniFile } from 'read-ini-file';
 /* eslint-disable-next-line
     @typescript-eslint/no-unsafe-assignment,
     @typescript-eslint/no-require-imports
@@ -15,13 +16,13 @@ import './gulpfile.ts';
 const testSrcFilesPath: string = path.join(__dirname, 'fixtures');
 const testDestFilesPath: string = path.join(__dirname, 'output');
 
-describe('file2qr', () => {
+describe('url2qr', () => {
 
   beforeEach(() => {
     fs.rmSync(testDestFilesPath, { force: true, recursive: true });
   });
 
-  it('must generate PNG QR code from text files, contains URL', async () => {
+  it('must generate PNG QR code from .url files', async () => {
     try {
       const _cwd = process.cwd();
       try {
@@ -53,8 +54,13 @@ ${err as Error}
     let dataFromFile: string | undefined;
     let QRCodeData: string;
     try {
-      const urlFilePath = path.join(testSrcFilesPath, 'test-file.txt');
-      dataFromFile = fs.readFileSync(urlFilePath, 'utf-8');
+      const urlFilePath = path.join(testSrcFilesPath, 'test-file.url');
+      const urlFileData = await readIniFile(urlFilePath) as {
+        InternetShortcut?: {
+          URL?: string
+        }
+      };
+      dataFromFile = urlFileData.InternetShortcut?.URL;
       const QRCodeBuffer = fs.readFileSync(QRCodePath);
       const QRCodeImage = await Jimp.read(QRCodeBuffer);
       QRCodeData = await new Promise<string>((resolve, reject) => {
