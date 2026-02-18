@@ -1,4 +1,4 @@
-### Create PNG QRCode from text files, contains URL
+# Create PNG QRCode from text files, contains URL
 
 `file2qr` can create PNG QRCodes from text files, contains URL.
 

@@ -1,4 +1,4 @@
-### Create QRCode in streaming mode with scale
+# Create QRCode in streaming mode with scale
 
 Read .url files in streaming mode
 and create PNG QRCodes with `scale = 10`.

@@ -9,22 +9,24 @@ import remarkValidateLinks from 'remark-validate-links';
 import { remarkAlert } from 'remark-github-blockquote-alert';
 import remarkLintCodeBlockStyle from 'remark-lint-code-block-style';
 import codeImport from 'remark-code-import';
+import { remarkInclude } from '@it-service-npm/remark-include';
 import remarkToc from 'remark-toc';
 
 export default {
-	plugins: [
-		codeImport,
-		remarkToc,
-		remarkLicense,
-		remarkGfm,
-		remarkAlert,
-		remarkValidateLinks,
-		remarkTypography,
-		remarkPresetLintConsistent,
-		remarkPresetLintRecommended,
-		remarkLintCodeBlockStyle,
-	],
-	settings: {
-		bullet: '*'
-	}
+  plugins: [
+    codeImport,
+    remarkInclude,
+    remarkToc,
+    remarkLicense,
+    remarkGfm,
+    remarkAlert,
+    remarkValidateLinks,
+    remarkTypography,
+    remarkPresetLintConsistent,
+    remarkPresetLintRecommended,
+    remarkLintCodeBlockStyle,
+  ],
+  settings: {
+    bullet: '*'
+  }
 }

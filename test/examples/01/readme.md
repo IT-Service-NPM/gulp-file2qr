@@ -1,4 +1,4 @@
-### Create PNG QRCode from string, contains URL
+# Create PNG QRCode from string, contains URL
 
 `file2qr` can create PNG QRCodes from string, contains URL.
 

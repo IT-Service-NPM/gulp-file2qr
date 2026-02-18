@@ -1,4 +1,4 @@
-### Create PNG QRCode from .url files with default settings
+# Create PNG QRCode from .url files with default settings
 
 `url2qr` can create PNG QRCodes from .url files.
 
