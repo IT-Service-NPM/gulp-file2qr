@@ -79,7 +79,7 @@ jobs:
       - name: Build
         run: npm run build
 
-      - uses: actions/github-script@v8
+      - uses: actions/github-script@v9
         id: read-package-json
         with:
           result-encoding: string
@@ -219,7 +219,7 @@ jobs:
           path: coverage
 
       - name: Set badge color2
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         id: get-badge-color
         with:
           result-encoding: string
